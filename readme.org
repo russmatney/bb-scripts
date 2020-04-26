@@ -1,0 +1,21 @@
+#+TITLE: bb-scripts
+
+A handful of bb-scripts, mostly written while reading the babashka documentation.
+
+
+* development
+** running scripts
+Scripts can be run via `bb -f <file>`, or if there is a hashbang and proper permissions, ./<file>.
+
+#+BEGIN_SRC zsh
+bb --classpath src --main cli -- -h
+#+END_SRC
+
+** running nrepl
+run an nrepl server to connect to.
+
+#+BEGIN_SRC zsh
+rlwrap bb --nrepl-server 1667
+#+END_SRC
+
+This can be connected to from cider via cider-connect.
